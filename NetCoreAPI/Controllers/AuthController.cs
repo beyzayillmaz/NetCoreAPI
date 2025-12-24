@@ -12,7 +12,7 @@ public class AuthController : ControllerBase
     {
         _tokenService = tokenService;
     }
-    [HttpPost("login")]
+    [HttpPost("Login")]
     public IActionResult Login(LoginRequest request)
     {
         // 1️⃣ Fake user (şimdilik)
@@ -26,7 +26,7 @@ public class AuthController : ControllerBase
             role: "Admin"
         );
 
-        // 3️⃣ Token’ı client’a dön
+        // 3️⃣ Token’ı client’a dön (Düzenlenecek)
         return Ok(new
         {
             accessToken = token
